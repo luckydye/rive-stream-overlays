@@ -33,16 +33,16 @@
 				}
 			}
 
-			function scoreRight(str) {
+			function scoreRight(str, doTrigger = true) {
 				const text = anim.artboardInstance.textValueRunByIndex(0);
 				text.text = str.toString();
-				trigger("point_right")
+				doTrigger && trigger("point_right")
 			}
 
-			function scoreLeft(str) {
+			function scoreLeft(str, doTrigger = true) {
 				const text = anim.artboardInstance.textValueRunByIndex(1);
 				text.text = str.toString();
-				trigger("point_left")
+				doTrigger && trigger("point_left")
 			}
 
 			function timer(str) {
@@ -68,8 +68,8 @@
 				playing = true;
 				timeStart = Date.now();
 
-				scoreLeft(scoreLeftValue);
-				scoreRight(scoreRightValue);
+				scoreLeft(scoreLeftValue, false);
+				scoreRight(scoreRightValue, false);
 
 				setTimeout(() => {
 					scoreLeft(++scoreLeftValue);
@@ -96,9 +96,40 @@
 				}, 10000)
 			}
 
-			setTimeout(() => {
-				play();
-			}, 1000);
+			function connect() {
+				const ws = new WebSocket("ws://localhost:1890")
+
+				let init = false;
+
+				ws.onopen = () => {
+					console.log("connected")
+				}
+
+				ws.onerror = (error) => {
+					play();
+				}
+
+				ws.onmessage = (event) => {
+					const data = JSON.parse(event.data);
+
+					const left = data.left;
+					const right = data.right;
+
+					if (left !== scoreLeftValue) {
+					scoreLeftValue = left;
+					   scoreLeft(left, init);
+					}
+
+					if (right !== scoreRightValue) {
+					scoreRightValue = right;
+					   scoreRight(right, init);
+					}
+
+					init = true;
+				}
+			}
+
+			setTimeout(() => { connect(); }, 500)
 		</script>
 
 		<a-animation id="anim" src="scorecounter.riv" width="500" height="200" />
