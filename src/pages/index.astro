@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body>
+		<script>
+			import { AnimationElement } from "@atrium-ui/elements/animation";
+
+			AnimationElement.riveWasm = "https://unpkg.com/@rive-app/canvas-advanced@2.19.8/rive.wasm";
+
+			let playing = true;
+			let scoreLeftValue = 0;
+			let scoreRightValue = 0;
+			let timeStart = 0;
+
+			function trigger(name) {
+				const stateMachine = anim.stateMachineInstance;
+
+				if (!stateMachine) return undefined;
+
+				for (let i = 0, l = stateMachine.inputCount(); i < l; i++) {
+					const input = stateMachine.input(i);
+					if(input.name === name) {
+						const trigger = input?.asTrigger();
+						trigger?.fire();
+						break;
+					}
+				}
+			}
+
+			function scoreRight(str) {
+				const text = anim.artboardInstance.textValueRunByIndex(0);
+				text.text = str.toString();
+				trigger("point_right")
+			}
+
+			function scoreLeft(str) {
+				const text = anim.artboardInstance.textValueRunByIndex(1);
+				text.text = str.toString();
+				trigger("point_left")
+			}
+
+			function timer(str) {
+				if(str) {
+					const text = anim.artboardInstance.textValueRunByIndex(2);
+					text.text = str;
+				}
+
+				anim.input("playing").asBool().value = !!str;
+			}
+
+			setInterval(() => {
+				if(playing) {
+					const deltaTime = Date.now() - timeStart;
+					const time = new Date(deltaTime).toTimeString().split(" ")[0];
+					timer(time);
+				} else {
+					timer();
+				}
+			}, 250)
+
+			function play() {
+				playing = true;
+				timeStart = Date.now();
+
+				scoreLeft(scoreLeftValue);
+				scoreRight(scoreRightValue);
+
+				setTimeout(() => {
+					scoreLeft(++scoreLeftValue);
+				}, 3000)
+
+				setTimeout(() => {
+					scoreRight(++scoreRightValue);
+				}, 2000)
+
+				setTimeout(() => {
+					scoreLeft(++scoreLeftValue);
+				}, 5000)
+
+				setTimeout(() => {
+					scoreLeft(++scoreLeftValue);
+				}, 8000)
+
+				setTimeout(() => {
+					playing = false;
+
+					setTimeout(() => {
+						play();
+					}, 2000);
+				}, 10000)
+			}
+
+			setTimeout(() => {
+				play();
+			}, 1000);
+		</script>
+
+		<a-animation id="anim" src="scorecounter.riv" width="500" height="200" />
+	</body>
+</html>
+<style is:global>
+a-animation {
+	width: 500px;
+	height: 200px;
+}
+:root {
+	background: #313131;
+}
+</style>

@@ -1,0 +1,23 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@atrium-ui/elements": "^1.14.1",
+    "@rive-app/canvas-advanced": "^2.19.8",
+    "astro": "^4.14.2"
+  },
+  "overrides": {
+    "@atrium-ui/elements": {
+      "@rive-app/canvas-advanced": "2.19.8"
+    }
+  }
+}
