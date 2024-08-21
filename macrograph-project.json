@@ -1,0 +1,1171 @@
+{
+    "name": "macrograph-project",
+    "graphIdCounter": 3,
+    "graphs": [
+        {
+            "id": 0,
+            "name": "ScoreCounter",
+            "nodeIdCounter": 161,
+            "nodes": {
+                "8": {
+                    "id": 8,
+                    "name": "WSS Emit",
+                    "position": [
+                        932,
+                        2
+                    ],
+                    "schema": {
+                        "package": "WebSocket Server",
+                        "id": "WSS Emit"
+                    },
+                    "defaultValues": {
+                        "port": 1890,
+                        "client": null,
+                        "data": "123"
+                    },
+                    "properties": {},
+                    "foldPins": false
+                },
+                "81": {
+                    "id": 81,
+                    "name": "Z Key",
+                    "position": [
+                        -80.7852220800089,
+                        1180.646913175288
+                    ],
+                    "schema": {
+                        "package": "Global Mouse & Keyboard",
+                        "id": "Z Key"
+                    },
+                    "defaultValues": {},
+                    "properties": {},
+                    "foldPins": false
+                },
+                "91": {
+                    "id": 91,
+                    "name": "JSON Map Create",
+                    "position": [
+                        290.06279065068645,
+                        130.86057086083423
+                    ],
+                    "schema": {
+                        "package": "Map",
+                        "id": "JSON Map Create"
+                    },
+                    "defaultValues": {
+                        "key-0": "score_left",
+                        "value-0": 0,
+                        "key-1": "score_right",
+                        "value-1": 0,
+                        "key-2": "src",
+                        "value-2": 0,
+                        "key-3": "playing",
+                        "value-3": false,
+                        "key-4": "timer",
+                        "value-4": 0
+                    },
+                    "properties": {
+                        "number": 5
+                    },
+                    "foldPins": false
+                },
+                "92": {
+                    "id": 92,
+                    "name": "Stringify JSON",
+                    "position": [
+                        653.1658351070973,
+                        257.8454333153852
+                    ],
+                    "schema": {
+                        "package": "Utils",
+                        "id": "Stringify JSON"
+                    },
+                    "defaultValues": {
+                        "in": {
+                            "variant": "Null"
+                        }
+                    },
+                    "properties": {},
+                    "foldPins": false
+                },
+                "93": {
+                    "id": 93,
+                    "name": "To JSON",
+                    "position": [
+                        531.8216067627643,
+                        260.38319244240256
+                    ],
+                    "schema": {
+                        "package": "JSON",
+                        "id": "To JSON"
+                    },
+                    "defaultValues": {
+                        "in": null
+                    },
+                    "properties": {},
+                    "foldPins": false
+                },
+                "98": {
+                    "id": 98,
+                    "name": "Get Graph Variable",
+                    "position": [
+                        -164.3970402801949,
+                        -78.55530661456618
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Get Graph Variable"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "variable": 96
+                    },
+                    "foldPins": false
+                },
+                "99": {
+                    "id": 99,
+                    "name": "Get Graph Variable",
+                    "position": [
+                        -160.30784366157727,
+                        -12.261310790782716
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Get Graph Variable"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "variable": 97
+                    },
+                    "foldPins": false
+                },
+                "100": {
+                    "id": 100,
+                    "name": "Set Graph Variable",
+                    "position": [
+                        373.61181820018544,
+                        1179.9309302842457
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Set Graph Variable"
+                    },
+                    "defaultValues": {
+                        "": 0
+                    },
+                    "properties": {
+                        "variable": 96
+                    },
+                    "foldPins": false
+                },
+                "101": {
+                    "id": 101,
+                    "name": "Add Ints",
+                    "position": [
+                        126.43213525529438,
+                        1279.8367443082154
+                    ],
+                    "schema": {
+                        "package": "Utils",
+                        "id": "Add Ints"
+                    },
+                    "defaultValues": {
+                        "one": 0,
+                        "two": 1
+                    },
+                    "properties": {},
+                    "foldPins": false
+                },
+                "102": {
+                    "id": 102,
+                    "name": "Emit Custom Event",
+                    "position": [
+                        856.2626004984395,
+                        1275.9359196416588
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Emit Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 3
+                    },
+                    "foldPins": false
+                },
+                "103": {
+                    "id": 103,
+                    "name": "Custom Event",
+                    "position": [
+                        530.584122524599,
+                        -55.25761114102565
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 1
+                    },
+                    "foldPins": false
+                },
+                "104": {
+                    "id": 104,
+                    "name": "Get Graph Variable",
+                    "position": [
+                        -94.41587747540098,
+                        1332.6256660379806
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Get Graph Variable"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "variable": 96
+                    },
+                    "foldPins": false
+                },
+                "106": {
+                    "id": 106,
+                    "name": "Set Graph Variable",
+                    "position": [
+                        396.6897463963214,
+                        1407.7451377474963
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Set Graph Variable"
+                    },
+                    "defaultValues": {
+                        "": 0
+                    },
+                    "properties": {
+                        "variable": 97
+                    },
+                    "foldPins": false
+                },
+                "107": {
+                    "id": 107,
+                    "name": "Add Ints",
+                    "position": [
+                        124.51006345143037,
+                        1557.650951771466
+                    ],
+                    "schema": {
+                        "package": "Utils",
+                        "id": "Add Ints"
+                    },
+                    "defaultValues": {
+                        "one": 0,
+                        "two": 1
+                    },
+                    "properties": {},
+                    "foldPins": false
+                },
+                "108": {
+                    "id": 108,
+                    "name": "Emit Custom Event",
+                    "position": [
+                        854.3405286945756,
+                        1453.7501271049093
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Emit Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 3
+                    },
+                    "foldPins": false
+                },
+                "109": {
+                    "id": 109,
+                    "name": "Get Graph Variable",
+                    "position": [
+                        -71.33794927926493,
+                        1635.4398735012312
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Get Graph Variable"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "variable": 97
+                    },
+                    "foldPins": false
+                },
+                "110": {
+                    "id": 110,
+                    "name": "X Key",
+                    "position": [
+                        -78.52391128922471,
+                        1470.7601058197351
+                    ],
+                    "schema": {
+                        "package": "Global Mouse & Keyboard",
+                        "id": "X Key"
+                    },
+                    "defaultValues": {},
+                    "properties": {},
+                    "foldPins": false
+                },
+                "111": {
+                    "id": 111,
+                    "name": "WSS Client Connected",
+                    "position": [
+                        532.3241014414707,
+                        -227.08549696885916
+                    ],
+                    "schema": {
+                        "package": "WebSocket Server",
+                        "id": "WSS Client Connected"
+                    },
+                    "defaultValues": {},
+                    "properties": {},
+                    "foldPins": false
+                },
+                "112": {
+                    "id": 112,
+                    "name": "Emit Custom Event",
+                    "position": [
+                        159.02640596793003,
+                        -182.537759127016
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Emit Custom Event"
+                    },
+                    "defaultValues": {
+                        "1:2": 0,
+                        "1:3": 0,
+                        "1:4": "",
+                        "1:5": true,
+                        "1:7": 0
+                    },
+                    "properties": {
+                        "event": 1
+                    },
+                    "foldPins": false
+                },
+                "114": {
+                    "id": 114,
+                    "name": "Get Graph Variable",
+                    "position": [
+                        -153.12945042434197,
+                        66.47608871077722
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Get Graph Variable"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "variable": 113
+                    },
+                    "foldPins": false
+                },
+                "119": {
+                    "id": 119,
+                    "name": "Custom Event",
+                    "position": [
+                        -155.08420726120528,
+                        -177.6620507207341
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 3
+                    },
+                    "foldPins": false
+                },
+                "124": {
+                    "id": 124,
+                    "name": "Emit Custom Event",
+                    "position": [
+                        758.2952855314388,
+                        -195.88439741345042
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Emit Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 3
+                    },
+                    "foldPins": false
+                },
+                "125": {
+                    "id": 125,
+                    "name": "Current Timestamp (ms)",
+                    "position": [
+                        323.1067441061674,
+                        1749.6871669810118
+                    ],
+                    "schema": {
+                        "package": "Utils",
+                        "id": "Current Timestamp (ms)"
+                    },
+                    "defaultValues": {},
+                    "properties": {},
+                    "foldPins": false
+                },
+                "128": {
+                    "id": 128,
+                    "name": "Get Graph Variable",
+                    "position": [
+                        -146.40959841033225,
+                        156.0690697157571
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Get Graph Variable"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "variable": 116
+                    },
+                    "foldPins": false
+                },
+                "130": {
+                    "id": 130,
+                    "name": "Emit Custom Event",
+                    "position": [
+                        884.2513320759581,
+                        1759.2173573353048
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Emit Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 3
+                    },
+                    "foldPins": false
+                },
+                "131": {
+                    "id": 131,
+                    "name": "Set Graph Variable",
+                    "position": [
+                        550.2374842381647,
+                        1757.4208668328147
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Set Graph Variable"
+                    },
+                    "defaultValues": {
+                        "": 0
+                    },
+                    "properties": {
+                        "variable": 132
+                    },
+                    "foldPins": false
+                },
+                "134": {
+                    "id": 134,
+                    "name": "Get Graph Variable",
+                    "position": [
+                        -143.12945042434197,
+                        233.44469338543377
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Get Graph Variable"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "variable": 132
+                    },
+                    "foldPins": false
+                },
+                "138": {
+                    "id": 138,
+                    "name": "Emit Custom Event",
+                    "position": [
+                        904.9336184451099,
+                        695.2584798965139
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Emit Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 3
+                    },
+                    "foldPins": false
+                },
+                "139": {
+                    "id": 139,
+                    "name": "Set Graph Variable",
+                    "position": [
+                        395.91977060731654,
+                        618.4619893940238
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Set Graph Variable"
+                    },
+                    "defaultValues": {
+                        "": false
+                    },
+                    "properties": {
+                        "variable": 116
+                    },
+                    "foldPins": false
+                },
+                "144": {
+                    "id": 144,
+                    "name": "Q Key",
+                    "position": [
+                        -90.13582557849512,
+                        626.101905883489
+                    ],
+                    "schema": {
+                        "package": "Global Mouse & Keyboard",
+                        "id": "Q Key"
+                    },
+                    "defaultValues": {},
+                    "properties": {},
+                    "foldPins": false
+                },
+                "145": {
+                    "id": 145,
+                    "name": "W Key",
+                    "position": [
+                        -76.0326822325573,
+                        754.5022008384038
+                    ],
+                    "schema": {
+                        "package": "Global Mouse & Keyboard",
+                        "id": "W Key"
+                    },
+                    "defaultValues": {},
+                    "properties": {},
+                    "foldPins": false
+                },
+                "146": {
+                    "id": 146,
+                    "name": "Emit Custom Event",
+                    "position": [
+                        890.2724237955571,
+                        820.4018346868316
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Emit Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 3
+                    },
+                    "foldPins": false
+                },
+                "147": {
+                    "id": 147,
+                    "name": "Set Graph Variable",
+                    "position": [
+                        406.2585759577637,
+                        743.6053441843416
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Set Graph Variable"
+                    },
+                    "defaultValues": {
+                        "": true
+                    },
+                    "properties": {
+                        "variable": 116
+                    },
+                    "foldPins": false
+                },
+                "149": {
+                    "id": 149,
+                    "name": "W Key",
+                    "position": [
+                        -51.96834053922731,
+                        1769.4270554908112
+                    ],
+                    "schema": {
+                        "package": "Global Mouse & Keyboard",
+                        "id": "W Key"
+                    },
+                    "defaultValues": {},
+                    "properties": {},
+                    "foldPins": false
+                },
+                "150": {
+                    "id": 150,
+                    "name": "W Key",
+                    "position": [
+                        -71.29741719910697,
+                        911.8961107831382
+                    ],
+                    "schema": {
+                        "package": "Global Mouse & Keyboard",
+                        "id": "W Key"
+                    },
+                    "defaultValues": {},
+                    "properties": {},
+                    "foldPins": false
+                },
+                "151": {
+                    "id": 151,
+                    "name": "Emit Custom Event",
+                    "position": [
+                        870.0076888290075,
+                        927.7957446315658
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Emit Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 3
+                    },
+                    "foldPins": false
+                },
+                "152": {
+                    "id": 152,
+                    "name": "Set Graph Variable",
+                    "position": [
+                        360.99384099121403,
+                        900.9992541290757
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Set Graph Variable"
+                    },
+                    "defaultValues": {
+                        "": 0
+                    },
+                    "properties": {
+                        "variable": 96
+                    },
+                    "foldPins": false
+                },
+                "153": {
+                    "id": 153,
+                    "name": "W Key",
+                    "position": [
+                        -86.78120887789333,
+                        1037.5351090723561
+                    ],
+                    "schema": {
+                        "package": "Global Mouse & Keyboard",
+                        "id": "W Key"
+                    },
+                    "defaultValues": {},
+                    "properties": {},
+                    "foldPins": false
+                },
+                "154": {
+                    "id": 154,
+                    "name": "Emit Custom Event",
+                    "position": [
+                        854.5238971502213,
+                        1053.4347429207837
+                    ],
+                    "schema": {
+                        "package": "Custom Events",
+                        "id": "Emit Custom Event"
+                    },
+                    "defaultValues": {},
+                    "properties": {
+                        "event": 3
+                    },
+                    "foldPins": false
+                },
+                "155": {
+                    "id": 155,
+                    "name": "Set Graph Variable",
+                    "position": [
+                        345.51004931242767,
+                        1026.6382524182936
+                    ],
+                    "schema": {
+                        "package": "Variables",
+                        "id": "Set Graph Variable"
+                    },
+                    "defaultValues": {
+                        "": 0
+                    },
+                    "properties": {
+                        "variable": 97
+                    },
+                    "foldPins": false
+                }
+            },
+            "commentBoxes": [],
+            "variables": [
+                {
+                    "id": 96,
+                    "name": "left",
+                    "value": 0,
+                    "type": "int"
+                },
+                {
+                    "id": 97,
+                    "name": "right",
+                    "value": 0,
+                    "type": "int"
+                },
+                {
+                    "id": 113,
+                    "name": "rive_src",
+                    "value": "scorecounter.riv",
+                    "type": "string"
+                },
+                {
+                    "id": 116,
+                    "name": "playing",
+                    "value": true,
+                    "type": "bool"
+                },
+                {
+                    "id": 132,
+                    "name": "timer",
+                    "value": 1724270590137,
+                    "type": "int"
+                }
+            ],
+            "connections": [
+                {
+                    "from": {
+                        "node": 91,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 93,
+                        "input": "in"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 93,
+                        "output": "out"
+                    },
+                    "to": {
+                        "node": 92,
+                        "input": "in"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 92,
+                        "output": "string"
+                    },
+                    "to": {
+                        "node": 8,
+                        "input": "data"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 81,
+                        "output": "pressed"
+                    },
+                    "to": {
+                        "node": 100,
+                        "input": "exec"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 98,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 112,
+                        "input": "1:2"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 99,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 112,
+                        "input": "1:3"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 101,
+                        "output": "output"
+                    },
+                    "to": {
+                        "node": 100,
+                        "input": ""
+                    }
+                },
+                {
+                    "from": {
+                        "node": 104,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 101,
+                        "input": "one"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 107,
+                        "output": "output"
+                    },
+                    "to": {
+                        "node": 106,
+                        "input": ""
+                    }
+                },
+                {
+                    "from": {
+                        "node": 109,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 107,
+                        "input": "one"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 110,
+                        "output": "pressed"
+                    },
+                    "to": {
+                        "node": 106,
+                        "input": "exec"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 114,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 112,
+                        "input": "1:4"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 103,
+                        "output": "1:2"
+                    },
+                    "to": {
+                        "node": 91,
+                        "input": "value-0"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 103,
+                        "output": "1:3"
+                    },
+                    "to": {
+                        "node": 91,
+                        "input": "value-1"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 103,
+                        "output": "1:4"
+                    },
+                    "to": {
+                        "node": 91,
+                        "input": "value-2"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 100,
+                        "output": "exec"
+                    },
+                    "to": {
+                        "node": 102,
+                        "input": "execIn"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 119,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 112,
+                        "input": "execIn"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 103,
+                        "output": "1:5"
+                    },
+                    "to": {
+                        "node": 91,
+                        "input": "value-3"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 103,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 8,
+                        "input": "exec"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 106,
+                        "output": "exec"
+                    },
+                    "to": {
+                        "node": 108,
+                        "input": "execIn"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 111,
+                        "output": "exec"
+                    },
+                    "to": {
+                        "node": 124,
+                        "input": "execIn"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 125,
+                        "output": "out"
+                    },
+                    "to": {
+                        "node": 131,
+                        "input": ""
+                    }
+                },
+                {
+                    "from": {
+                        "node": 128,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 112,
+                        "input": "1:5"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 131,
+                        "output": "exec"
+                    },
+                    "to": {
+                        "node": 130,
+                        "input": "execIn"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 125,
+                        "output": "exec"
+                    },
+                    "to": {
+                        "node": 131,
+                        "input": "exec"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 134,
+                        "output": ""
+                    },
+                    "to": {
+                        "node": 112,
+                        "input": "1:7"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 103,
+                        "output": "1:7"
+                    },
+                    "to": {
+                        "node": 91,
+                        "input": "value-4"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 147,
+                        "output": "exec"
+                    },
+                    "to": {
+                        "node": 146,
+                        "input": "execIn"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 144,
+                        "output": "pressed"
+                    },
+                    "to": {
+                        "node": 139,
+                        "input": "exec"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 145,
+                        "output": "pressed"
+                    },
+                    "to": {
+                        "node": 147,
+                        "input": "exec"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 149,
+                        "output": "pressed"
+                    },
+                    "to": {
+                        "node": 125,
+                        "input": "exec"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 152,
+                        "output": "exec"
+                    },
+                    "to": {
+                        "node": 151,
+                        "input": "execIn"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 150,
+                        "output": "pressed"
+                    },
+                    "to": {
+                        "node": 152,
+                        "input": "exec"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 155,
+                        "output": "exec"
+                    },
+                    "to": {
+                        "node": 154,
+                        "input": "execIn"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 153,
+                        "output": "pressed"
+                    },
+                    "to": {
+                        "node": 155,
+                        "input": "exec"
+                    }
+                },
+                {
+                    "from": {
+                        "node": 139,
+                        "output": "exec"
+                    },
+                    "to": {
+                        "node": 138,
+                        "input": "execIn"
+                    }
+                }
+            ]
+        }
+    ],
+    "customEventIdCounter": 4,
+    "customEvents": [
+        {
+            "id": 1,
+            "name": "score",
+            "fields": [
+                {
+                    "id": 2,
+                    "name": "score_left",
+                    "type": "int"
+                },
+                {
+                    "id": 3,
+                    "name": "score_right",
+                    "type": "int"
+                },
+                {
+                    "id": 4,
+                    "name": "src",
+                    "type": "string"
+                },
+                {
+                    "id": 5,
+                    "name": "playing",
+                    "type": "bool"
+                },
+                {
+                    "id": 7,
+                    "name": "timer",
+                    "type": "int"
+                }
+            ],
+            "fieldIdCounter": 8
+        },
+        {
+            "id": 3,
+            "name": "score_change",
+            "fields": [],
+            "fieldIdCounter": 1
+        }
+    ],
+    "customTypeIdCounter": 2,
+    "customStructs": [
+        {
+            "id": 1,
+            "name": "Score",
+            "fields": [
+                {
+                    "name": "left",
+                    "id": "0",
+                    "type": "string"
+                },
+                {
+                    "name": "right",
+                    "id": "1",
+                    "type": "string"
+                }
+            ],
+            "fieldIdCounter": 3
+        }
+    ],
+    "counter": 2,
+    "resources": [],
+    "variables": []
+}
