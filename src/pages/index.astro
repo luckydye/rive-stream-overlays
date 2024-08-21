@@ -26,10 +26,10 @@
           AnimationElement.riveWasm = "https://unpkg.com/@rive-app/canvas-advanced@2.19.8/rive.wasm";
 
           // https://github.com/rive-app/rive-wasm/blob/9677ba80e78d20e27693b27681b61614d11f6c44/js/src/rive.ts#L265
-          enum StateMachineInputType {
-            Number = 56,
-            Trigger = 58,
-            Boolean = 59,
+          const StateMachineInputType = {
+            Number: 56,
+            Trigger: 58,
+            Boolean: 59,
           }
 
           function connect() {
