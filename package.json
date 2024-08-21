@@ -4,16 +4,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vite dev",
+    "build": "vite build"
   },
   "dependencies": {
     "@atrium-ui/elements": "^1.14.1",
     "@rive-app/canvas-advanced": "^2.19.8",
-    "astro": "^4.14.2"
+    "vite": "^5.4.2",
+    "vite-plugin-singlefile": "^2.0.2"
   },
   "overrides": {
     "@atrium-ui/elements": {
