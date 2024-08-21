@@ -105,5 +105,5 @@ function connect(ws) {
 
 if (typeof window !== "undefined") {
   console.info("connecting");
-  setTimeout(() => { connect(new WebSocket("ws://localhost:1890")); }, 250);
+  setTimeout(() => { connect(new WebSocket(location.hash ? `ws://${location.search.substring(1)}` : "ws://localhost:1890")); }, 250);
 }
