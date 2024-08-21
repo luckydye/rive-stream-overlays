@@ -9,10 +9,21 @@ const StateMachineInputType = {
   Boolean: 59,
 }
 
-function connect() {
+function connect(ws) {
   const anim = document.querySelector<AnimationElement>("#anim");
-  const ws = new WebSocket("ws://localhost:1890")
   const state = new Map();
+
+  setInterval(() => tick(), 12 / 1000);
+
+  function tick() {
+    const delta = Date.now() - state.get("timer");
+    const formattedTime = new Date(delta).toISOString().substr(11, 8);
+
+    const textRun = anim.artboardInstance?.textRun("timer");
+    if (textRun) {
+      textRun.text = formattedTime;
+    }
+  }
 
   ws.onopen = () => {
     console.log("connected")
@@ -76,18 +87,23 @@ function connect() {
         }
       }
 
+      state.set(key, value);
+
+      if (key === "timer") {
+        // timer is a special variable for a stopwatch
+        continue;
+      }
+
       // look for text run too
       const textRun = anim.artboardInstance?.textRun(key);
       if (textRun?.name === key) {
         textRun.text = value.toString();
       }
-
-      state.set(key, value);
     }
   }
 }
 
 if (typeof window !== "undefined") {
   console.info("connecting");
-  setTimeout(() => { connect(); }, 250);
+  setTimeout(() => { connect(new WebSocket("ws://localhost:1890")); }, 250);
 }
