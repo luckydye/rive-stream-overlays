@@ -26,31 +26,27 @@ function connect() {
     // TODO: reconnect
   }
 
-  ws.onmessage = (event) => {
+  ws.onmessage = async (event) => {
     const data = JSON.parse(event.data);
 
     console.info(data);
 
+    if ("src" in data && anim.src !== data.src) {
+      const loaded = new Promise((resolve) => {
+        const onLoaded = () => {
+          anim.removeEventListener("load", onLoaded);
+          resolve(0);
+        }
+        anim.addEventListener("load", onLoaded);
+      });
+
+      anim.src = data.src;
+
+      await loaded;
+    }
+
     for (const key in data) {
       const value = data[key];
-
-      if (key === "src") {
-        anim.src = value;
-      }
-
-      let needsUpdate = false;
-
-      if (!state.has(key)) {
-        needsUpdate = true;
-      } else if (state.get(key) !== value) {
-        needsUpdate = true;
-      }
-
-      state.set(key, value);
-
-      if (!needsUpdate) {
-        continue;
-      }
 
       // search input by name
       const input = anim.input(key);
@@ -58,13 +54,22 @@ function connect() {
         // update input value
         switch (input.type) {
           case StateMachineInputType.Boolean:
-            input.asBool().value = Boolean(value);
+            const bool = input.asBool();
+            if (bool.value !== value) {
+              bool.value = value;
+            }
             break;
           case StateMachineInputType.Number:
-            input.asNumber().value = Number(value);
+            const number = input.asNumber();
+            if (number.value !== value) {
+              number.value = Number(value);
+            }
             break;
           case StateMachineInputType.Trigger:
-            input.asTrigger().fire();
+            const trigger = input.asTrigger();
+            if (state.get(key) !== value) {
+              trigger.fire();
+            }
             break;
           default:
             console.log("unknown input", input);
@@ -76,6 +81,8 @@ function connect() {
       if (textRun?.name === key) {
         textRun.text = value.toString();
       }
+
+      state.set(key, value);
     }
   }
 }
