@@ -13,15 +13,19 @@ function connect(ws) {
   const anim = document.querySelector<AnimationElement>("#anim");
   const state = new Map();
 
-  setInterval(() => tick(), 12 / 1000);
+  setInterval(() => tick(), 4 / 1000);
 
   function tick() {
-    const delta = Date.now() - state.get("timer");
-    const formattedTime = new Date(delta).toISOString().substr(11, 8);
-
-    const textRun = anim.artboardInstance?.textRun("timer");
-    if (textRun) {
-      textRun.text = formattedTime;
+    const delta = Date.now() - Number(state.get("timer"));
+    try {
+      const formattedTime = new Date(delta).toISOString().substr(11, 8);
+      
+      const textRun = anim.artboardInstance?.textRun("timer");
+      if (textRun) {
+        textRun.text = formattedTime;
+      }
+    } catch(err) {
+      console.error(err)
     }
   }
 
